@@ -1,30 +1,6 @@
 //email capture mail
 
 //for form on home page
-function saveToFirebase() 
-{
-    const data = document.getElementById('emailForm').elements[0].value;
-    console.log("hee");
-
-    if(ValidateEmail(data))
-    {
-        firebase.database().ref('emails').push({ email: data})
-            .then(function(snapshot) {
-                console.log("..... passed");
-                    pass(); 
-                }, function(error) 
-                {
-                    console.log('error' + error);
-                    fail(); 
-                });
-        // pass0();
-        document.getElementById('emailForm').reset();
-    }else{
-        fail();
-    }
-
-}
-
 
 function ValidateEmail(mail) 
 {
@@ -47,3 +23,28 @@ function pass()
     console.log("pass called");
     $('#succ').finish().show().delay(1000).fadeOut(6000);
 }
+
+
+
+$('#email_form_btn').click(function(){
+    const data = document.getElementById('emailForm').elements[0].value;
+    console.log("btn pressed");
+    if(ValidateEmail(data))
+    {
+        firebase.database().ref('emails').push({ email: data})
+            .then(function(snapshot) {
+                console.log("Email registered!");
+                    pass(); 
+                }, function(error) 
+                {
+                    console.log('error' + error);
+                    fail(); 
+                });
+        console.log("afteerrrrr firebase");
+        pass();
+        // document.getElementById('emailForm').reset();
+    }else{
+        console.log("elseee:");
+        fail();
+    }
+})
