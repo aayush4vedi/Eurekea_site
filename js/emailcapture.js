@@ -27,6 +27,7 @@ function pass()
 
 
 $('#email_form_btn').click(function(){
+    event.preventDefault();
     const data = document.getElementById('emailForm').elements[0].value;
     console.log("btn pressed");
     if(ValidateEmail(data))
