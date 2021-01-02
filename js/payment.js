@@ -29,7 +29,7 @@ $('#plan1_payment_form').submit( async function(){
       if(isIndian){
         // goto plan_1.INR
         stripe.redirectToCheckout({
-          lineItems: [{price: 'price_1I4yyUF7UiqhzjejD3ZTeLit', quantity: 1}],
+          lineItems: [{price: 'price_1I5BnWF7UiqhzjejUmOZRsF9', quantity: 1}],
           mode: 'payment',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -43,7 +43,7 @@ $('#plan1_payment_form').submit( async function(){
       }else{
         // goto plan1.DLR
         stripe.redirectToCheckout({
-          lineItems: [{price: 'price_1I4yyUF7UiqhzjejD3ZTeLit', quantity: 1}],
+          lineItems: [{price: 'price_1I5BmAF7Uiqhzjej50dn5Cch', quantity: 1}],
           mode: 'payment',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
