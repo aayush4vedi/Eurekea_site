@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+
+    
+
+    <!--  STRIPE:: test mode-->
+    <script src="https://js.stripe.com/v3/"></script>
     
     <!-- script
     ================================================== -->
@@ -34,16 +39,17 @@
     
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
     <script>
-    const firebaseConfig = {
-        apiKey: "AIzaSyAwzfvOuWqHCGmDaKIG6c9ae2rRvbTJbN4",
-        authDomain: "eurekeamailer.firebaseapp.com",
-        databaseURL: "https://eurekeamailer-default-rtdb.firebaseio.com",
-        projectId: "eurekeamailer",
-        storageBucket: "eurekeamailer.appspot.com",
-        messagingSenderId: "1042129843437",
-        appId: "1:1042129843437:web:5e8cec08f52bf9129f48e4",
-        measurementId: "G-9KDC8FMEMK"
+    //this one is for eurekea-striper
+    var firebaseConfig = {
+        apiKey: "AIzaSyCu66m07Fhvl3CpkHz39Bq3RQV70N6SyP8",
+        authDomain: "eurekea-striper.firebaseapp.com",
+        projectId: "eurekea-striper",
+        storageBucket: "eurekea-striper.appspot.com",
+        messagingSenderId: "1089643325119",
+        appId: "1:1089643325119:web:6cd267550a744f6d3e880a",
+        measurementId: "G-2MNNJNW7QP"
     };
+
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     // firebase.analytics();
@@ -81,8 +87,8 @@
 
         <div class="row">
             <div class="header-logo">
-                <a class="site-logo" href="index.html">
-                    <img src="images/eurekea_logo.png" alt="Eurëkea!">
+                <a class="site-logo" href="https://www.eurekea.org/">
+                    <img src="images/eurekea_logo_wo_bg.png" alt="Eurëkea!">
                 </a>
             </div>
     
@@ -92,20 +98,19 @@
                     <li><a class="smoothscroll" href="#about" title="about">About</a></li>
                     <li><a class="smoothscroll" href="#demo" title="features">Preview</a></li>
                     <li><a class="smoothscroll" href="#pricing" title="pricing">Pricing</a></li>
-                    <li><a class="smoothscroll" href="#signup" title="pricing">Buy</a></li>
-                    <li><a class="smoothscroll" href="yay.html" title="pricing">Yay</a></li>
+                    <li><a class="smoothscroll" href="#footer" title="footer">Contact Us</a></li>
                 </ul>
     
                 <div class="header-cta">
                     <a href="#demo" class="btn btn--secondary header-cta__btn smoothscroll">Show Me A Demo First</a>
-                    <a href="#signup" class="btn btn--primary header-cta__btn smoothscroll">I Want to Buy!</a>
+                    <a href="#pricing" class="btn btn--primary header-cta__btn smoothscroll">I Want to Buy!</a>
                 </div>
             </nav> 
             <a class="header-menu-toggle" href="#"><span>Menu</span></a>
         </div>
 
     </header> 
-    
+
 
     <!-- home
     ================================================== -->
@@ -115,22 +120,30 @@
             <div class="row home-content__main">
                 <div class="home-content__left">
                     <h1>
-                        Ikea <br>for your next <br>Idea.
+                        //[Test_MODE:DoNotEnter]Ikea <br>for your next <br>Idea.
                     </h1>
                     <h3>
                         Can't decide what to work on next?<br>
                     </h3>
                     <h3>
-                        Here's the curated dataset of <b>250K+ Saas & Apps</b> to get you inspired.
-                        <br>Added with <b>28 metrics</b> to find your perfect niche.
+                        Here's the curated dataset of <b>250K+ Saas, Apps & Products</b> to get you inspired.
+                    </h3>
+                    <h3>
+                        Added with <b>28 metrics</b> to find your perfect niche.
                     </h3>
                         <br>
-                    <a href="#signup" class="btn btn--primary home-content__btn smoothscroll">
-                        I'm Interested
-                    </a>
-                    <h4>
+                    <div>
+                        <a href="#demo" class="btn btn--secondary home-content__btn smoothscroll">
+                            Live Demo
+                        </a>
+                        <a href="#pricing" class="btn btn--primary buy_now home-content__btn smoothscroll">
+                            Buy Now
+                        </a>
+                    </div>
+                    <a href="#pricing"><div class="discount"> 10% OFF for first 200 customers!</div></a>
+                    <!-- <h4>
                         This is a pre-launch. <a href="#signup"><u>Join waitlist now</u></a> to get early bird offers on dataset.
-                    </h4> 
+                    </h4>  -->
                 </div> 
                 <div class="home-content__right">
                     <img src="images/idea_undraw.png">
@@ -163,33 +176,33 @@
                 </p>
             </div>
         </div> <!-- end section-header -->
-        <!-- #TODO: write about sources, metrices & filtering feature here -->
-        <!-- TODO: write about the output formats available -->
+        <!-- #TODO: change product count here too -->
         <div class="row wide about-desc" data-aos="fade-up">
 
             <div class="col-full slick-slider about-desc__slider">
 
                 <div class="about-desc__slide">
-                    <h3 class="item-title">2,50,000+ Products.</h3>
+                    <h3 class="item-title">250000+ Products.</h3>
 
-                    Curated from multiple platforms
+                    Curated from multiple platforms:
                     
-                    <img src="images/PH/Pixels/product-hunt-logo-horizontal-orange.png" alt="ProductHunt" style="height:8rem;margin-left:-2rem;">
+                    <img src="images/PH/Pixels/product-hunt-logo-horizontal-orange.png" alt="ProductHunt" style="height:8rem;margin-left:-1.5rem;">
                     <img src="images/google-play.png" alt="Google Play Store" style="height:5rem;">
-                    <p>
-                    <!-- <ul>
+                    <span>
+                        <strong style="font-size:16px;">(ProductHunt: 70K+ & PlayStore: 180K+)</strong>
+                    <!-- <ul>  TODO: change this count
                         <li>ProductHunt</li>
                         <li>Google Play Store</li> 
                         <li>App Store</li>
                     </ul> -->
-                    </p>
+                    </span>
                 </div>   
                 
                 <div class="about-desc__slide">
                     <h3 class="item-title">It's A Match!</h3>
                     <p>
                         28 useful data points to filter products on your domain of interest. I've shown just 3 of them in <a href="#demo">demo</a>.
-                        <b>Pick your data format.</b>CSV, XLSX, Json, XML - you name it. 
+                        <b>Data formats of your choice:</b><br>CSV, XLSX, Json, XML. 
                     </p>
                 </div>   
                 <div class="about-desc__slide">
@@ -198,7 +211,7 @@
                         <!-- If you choose to subscribe with Eurekea.
                         Else, you get one big chunk of the data for sure :) -->
                         <!-- Our scrapers are always running :) -->
-                        Biweekly updates on dataset to give you all the trending & recently launched products out there.
+                        Monthly updates on dataset to give you all the recently launched trending products out there.
                     </p>
                 </div>   
 
@@ -6360,25 +6373,26 @@
                 <h1 class="display-1">
                    Pricing.
                 </h1>
-                <p class="comingsoon-tag">Coming Soon..</p>
             </div>
         </div> 
 
         <div class="row plans block-1-2 block-m-1-2 block-tab-full stack">
 
-            <div class="col-block item-plan plan1_disabled" data-aos="fade-up">
+            <div class="col-block item-plan" data-aos="fade-up">
                 <div class="item-plan__block"> 
-
+                    <div class="ribbon">
+                        <span>-10%</span>
+                    </div>
                     <div class="item-plan__top-part">
-                        <h3 class="item-plan__title">One Time Buy</h3>
-                        <p class="item-plan__price item-plan__price_disabled">$55</p>
-                        <p class="item-plan__per">Forever</p>
+                        <h3 class="item-plan__title">Static Dataset</h3>
+                        <p class="item-plan__price">$50</p>
+                        <p class="item-plan__per">One Time Buy</p>
                     </div>
 
                     <div class="item-plan__bottom-part">
                         <ul class="item-plan__features">
                             <li>Entire static dataset of 250K product's information(as of our last snapshot)</li>
-                            <li >All 28 metrics for insight</li>
+                            <li>All 28 metrics for insights</li>
                             <li >Get data in your chosen format</li>
                         </ul>
                         <ul class="item-plan__features_no">
@@ -6386,33 +6400,33 @@
                             <li>Early access to our Idea Generator </li>
                         </ul>
                         <br>
-                        <a class="btn btn--primary large full-width"  title="hover text">Get Started</a>
-                    </div>  
-                
+                        <a class="btn btn--primary large full-width" title="Find Your Eurekea Moment!" id="payment_btn_1">Get Started</a>
+                    </div>
+                    <div id="stripe-error-message-recur"></div>
                 </div>
             </div> 
 
-            <div class="col-block item-plan item-plan--popular plan2_disabled" data-aos="fade-up">
+            <div class="col-block item-plan item-plan--popular" data-aos="fade-up">
                 <div class="item-plan__block"> 
-
                     <div class="item-plan__top-part">
-                        <h3 class="item-plan__title">Subscription Plan</h3>
-                        <p class="item-plan__price">$10</p>
+                        <h3 class="item-plan__title">Dynamic Dataset</h3>
+                        <p class="item-plan__price item-plan__price_disabled">$10</p>
                         <p class="item-plan__per">Per Month</p>
                     </div>
 
                     <div class="item-plan__bottom-part">
-                        <ul class="item-plan__features">
+                        <ul class="white_text_on_red item-plan__features">
                             <li>Fresh dataset of 50K products every month(no duplicates, ever)</li>
-                            <li>All 28 metrics for insight</li>
-                            <li >Get data in your chosen format</li>
+                            <li>All 28 metrics for insights</li>
+                            <li>Get data in your chosen format</li>
                             <li>Access to data of products launched every month</li>
                             <li>Early access to our Idea Generator </li>
                         </ul>
+                        
                         <br>
-                        <a class="btn btn--primary large full-width" href="#0">Get Started</a>
-                    </div>
-                
+                        <a class="btn btn--primary large full-width"  title="Find Your Eurekea Moment!" id="payment_btn_2">Get Started</a>
+                    </div>  
+                    <div id="stripe-error-message-fixed"></div>
                 </div>
             </div> 
 
@@ -6420,26 +6434,81 @@
 
     </section> 
 
+    <!-- Payment Popup :: START
+    ================================================== -->
+    <div id="payment_popup_1" class="popup">
+        <div class="popup-content">
+            <form class="form" id="plan1_payment_form">
+                <div class="row align-center">
+                    <div class="col-full">
+                        <img src="images/Powered by Stripe - blurple.png" alt="Powered by Stripe!">
+                        <span class="popup_close" id="popup_close_btn1">×</span>
+                        <h4>Tell Us About Yourself</h4>
+                         <p>Where are you at currently</p>
+                        <div style="text-align:left;">
+                            <input type="radio" id="ind_plan_1" name="plan1_radio" value="ind_plan_1">
+                            <label for="ind_plan_1">I am from India</label><br>
+                            <input type="radio" id="dlr_plan_1" name="plan1_radio" value="dlr_plan_1" checked>
+                            <label for="dlr_plan_1">I am from outside of India</label><br>
+                        </div> 
+                        <!-- <div> The slider radio - I didn't use
+                            <input type="radio" id="radio-nine" name="notaswitch-two" value="yes" checked/>
+                            <label for="radio-nine">I am from India</label><br />
+                            <input type="radio" id="radio-ten" name="notaswitch-two" value="maybe" />
+                            <label for="radio-ten">I am from outside of India</label><br />
+                        </div> -->
+                        <p>Enter your email</p>
+                        <input type="email" size="35" name="email_plan_1" id="email_plan_1" value="" placeholder="abc@xyz.com" class="popup_input" required="yes" /> 
+                        <div ></div> 
+                        <label style="margin-left: -130px;">Please use the same email on payment page as well.</label> 
+                        <!-- <a class='btn-Stripe-inverse' id="plan_1_inr_btn">I am from India</a>
+                        <a class='btn-Stripe' id="plan_1_dlr_btn">I am from outside of India</a> -->
+                        <br><br>
+                        <button type="submit" class='btn-Stripe' id="plan_1_pay_btn" >Proceed to Payment</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div id="payment_popup_2" class="popup">
+        <div class="popup-content">
+            <form class="form" id="plan2_payment_form">
+                <div class="row align-center">
+                    <div class="col-full">
+                        <img src="images/Powered by Stripe - blurple.png" alt="Powered by Stripe!">
+                        <span class="popup_close" id="popup_close_btn2">×</span>
+                        <h4>Tell Us About Yourself</h4>
+                         <p>Where are you at currently</p>
+                        <div style="text-align:left;">
+                            <input type="radio" id="ind_plan_2" name="plan2_radio" value="ind_plan_2">
+                            <label for="ind_plan_2">I am from India</label><br>
+                            <input type="radio" id="dlr_plan_2" name="plan2_radio" value="dlr_plan_2" checked>
+                            <label for="dlr_plan_2">I am from outside of India</label><br>
+                        </div> 
+                        <p>Enter your email</p>
+                        <input type="email" size="35" name="email_plan_2" id="email_plan_2" value="" placeholder="abc@xyz.com" class="popup_input" required="yes" /> 
+                        <div ></div> 
+                        <label style="margin-left: -130px;">Please use the same email on payment page as well.</label> 
+                        <br><br>
+                        <button type="submit" class='btn-Stripe' id="plan_2_pay_btn" >Proceed to Payment</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Payment Popup :: END
+    ================================================== -->
+
+
     <!-- email capture
     ================================================== -->
 
-    <section id="signup" class="s-pricing target-section">
-
-        <div class="row section-header align-center" data-aos="fade-up">
-            <div class="col-full">
-                <h1 class="display-1">
-                   We Are Going Live Soon.
-                </h1>
-                <p class="lead">
-                    Register now to get early bird offers. It's absolutely free!
-                </p>
-            </div>
-        </div> 
-
+    <!-- NOTE: disabled after prelaunc -->
+    <!-- <section id="signup" class="s-pricing target-section">
         <div class="row signup_wrappe block-1-2 block-m-1-2 block-tab-full stack">
-
             <section class="Signup">
-                <!-- <form class="Signup__form" id="emailForm" onsubmit="saveToFirebase()"> -->
                 <form class="Signup__form" id="emailForm">
                   <input id="email" type="email" placeholder="Enter your Email" required>
                   <button type="submit" class="btn btn--primary" id="email_form_btn">Register Me</button>
@@ -6457,12 +6526,73 @@
                 </p>
             </div> 
         </div>
-
     </section> 
+     -->
+    <section id="faqs" class="s-pricing target-section">
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h1 class="display-1" style="text-align:center;">
+                   F.A.Q.s
+                </h1>
+                <div class='faq'>
+                    <input id='faq-a' type='checkbox'>
+                    <label for='faq-a'>
+                      <p class="faq-heading">How am I supposed to get ideas from already implemented products?</p>
+                      <div class='faq-arrow'></div>
+                        <p class="faq-text">
+                            <strong>During quarantine</strong>, finding ideas solely based on epiphanies or scratching personal itches can be tricky.<br>Using this database you can: 
+                              <ul class="faq-ul">
+                                  <li>Filter out products with validated demand & poor rating in your niche.This means there's an opportunity to do things <strong>"your own way"</strong> to solve what the existing products are failing at.</li>
+                                  <li>Bring successful products to your own domain/region/language.</li>
+                                  <li>Run analysis to understand current trends, what makes some products/makers more successful etc.</li>
+                              </ul>
+                        </p>
+                    </label>
+                    <input id='faq-b' type='checkbox'>
+                    <label for='faq-b'>
+                      <p class="faq-heading">What exactly is in this 250K+ dataset?</p> <!-- TODO: update numbers here too -->
+                      <div class='faq-arrow'></div>
+                        <p class="faq-text">This dataset contains 180K+ products launched on <strong>Google Play Store</strong> & 70K+ on <strong>ProductHunt</strong>.<br>These include all kind of prodcuts: Saas, Side-Hustles, Startups, Apps tagged with over <strong>200</strong> unique categories.
+                        Each product has 28 datapoints which can be used to get numerous insights from the data.
+                        </p>
+                    </label>
+                    <input id='faq-d' type='checkbox'>
+                    <label for='faq-d'>
+                      <p class="faq-heading">What kind of analysis can be done from these datapoints?</p>
+                      <div class='faq-arrow'></div>
+                        <p class="faq-text">
+                            There are 28 unique datapoints for all the items. Here are the few analysis that could be done.Rest, as Hiro Hamada said- <strong>"The only limit is your imagination."</strong>
+                            <br>PS: No privacy violation was harmed in this.All the data is available in public.
+                            <ul class="faq-ul">
+                                <li><strong>Populariy Analysis</strong> - <code>rating</code> <code>number_of_upvotes</code> <code>number_of_comments</code> <code>customerbase</code> <code>similar_products</code> <code>current_state</code> </li>
+                                <li><strong>Sentimental Analysis</strong> - <code>users_comments</code> <code>positive_reviews_count</code>, <code>negative_reviews_count</code> <code>neutral_reviews_count</code></li>
+                                <li><strong>Textual Analysis</strong> - <code>product_tags</code> <code>product_tagline</code> <code>description</code> <code>makers_comment</code></li>
+                                <li><strong>Others</strong> - <code>product_url</code> <code>makers_contact</code> <code>makers_website</code> <code>makers_twitter</code></li>
+                            </ul>
+                        </p>
+                    </label>
+                    <input id='faq-e' type='checkbox'>
+                    <label for='faq-e'>
+                      <p class="faq-heading">How do updates work in the subscription plan?</p>
+                      <div class='faq-arrow'></div>
+                        <p class="faq-text">Under Subscription Plan, you'll receive the recent products launched that month.But since there aren't 50K products launching every month, I'll add the rest from my static dataset(the 250K+ one).<br>Rest assured, there won't be any repeats.</p>
+                    </label>
+                      <input id='settings' type='checkbox'>
+                    <input id='faq-f' type='checkbox'>
+                    <label for='faq-f'>
+                      <p class="faq-heading">What if I want to get products launched on other platforms?</p>
+                      <div class='faq-arrow'></div>
+                        <p class="faq-text">I've got multiple to-be-added-sources in my pipeline.But being the only developer, it will take some time.Stay tuned!</p>
+                    </label>
+                  </div>
+            </div>
+        </div> 
+    </section> 
+
 
     <!-- footer
     ================================================== -->
-    <footer class="s-footer footer">
+    <footer class="s-footer footer" id="footer">
 
 
         <div class="row footer__bottom">
@@ -6478,7 +6608,7 @@
                 <div class="row">
 
                     <div class="footer__contact col-10 mob-full">
-                        <h4>Contact Maker.</h4>
+                        <h4>Contact the Maker.</h4>
 
                         <p class="footer_p">
                         Need help or have a question? Contact me at: <br>
@@ -6516,5 +6646,5 @@
     <script src="js/main.js"></script>
     <script src="js/table.js"></script>
     <script src="js/emailcapture.js"></script>
-
+    <script src="js/payment.js"></script>  
 </body>
