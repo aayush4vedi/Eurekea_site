@@ -1,4 +1,3 @@
-// var stripe = Stripe('pk_test_51HdkIZF7Uiqhzjej6i0PT2SdIPS7uYiWYyfLBcYNFrHWgr67WknIW4VTrx0ZBkqOGmYPyoWiP0dWX3UPdJXPt09v00CKwfpj5W');
 var stripe = Stripe('pk_live_51HdkIZF7Uiqhzjej8jmVn0cPP7nHUz8WWf5tXCAuN9RUdvMqz1HFMf8c2jIeqodpvVEyp5sboQbM2Upq77k5FeUS00nBr8DiFh');
 
 $('#plan1_payment_form').submit( async function(){
@@ -44,7 +43,7 @@ $('#plan1_payment_form').submit( async function(){
       }else{
         // goto plan1.DLR
         stripe.redirectToCheckout({
-          lineItems: [{price: 'price_1I3NPcF7UiqhzjejJAWTKQ4U', quantity: 1}],
+          lineItems: [{price: 'price_1I4yyUF7UiqhzjejD3ZTeLit', quantity: 1}],
           mode: 'payment',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -87,7 +86,7 @@ $('#plan2_payment_form').submit( async function(){
       if(isIndian){
         // goto plan_2.INR
         stripe.redirectToCheckout({
-          lineItems: [{price: 'price_1I4z69F7UiqhzjejdZwD18dd', quantity: 1}],
+          lineItems: [{price: 'price_1I58rvF7UiqhzjejVy9rjnuY', quantity: 1}],
           mode: 'subscription',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -99,8 +98,9 @@ $('#plan2_payment_form').submit( async function(){
           }
         });
       }else{
+        //goto plan_2.Dlr
         stripe.redirectToCheckout({
-          lineItems: [{price: 'price_1I4z69F7UiqhzjejdZwD18dd', quantity: 1}],
+          lineItems: [{price: 'price_1I58qjF7UiqhzjejKSo97H1z', quantity: 1}],
           mode: 'subscription',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
