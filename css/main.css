@@ -609,7 +609,7 @@ button,
   box-shadow: rgba(0, 0, 0, 0.56) 6px 5px 17px 0px;
 }
 
-input,
+/* input, */
 textarea,
 /* select, */
 pre,
@@ -3718,7 +3718,7 @@ select {
  * ------------------------------------------------------------------- */
 .s-pricing {
   padding-top: 19.2rem;
-  padding-bottom: 16rem;
+  padding-bottom: 0rem;
   background-color: #ffffff;
   position: relative;
 }
@@ -3943,7 +3943,7 @@ Diabled pricing: END
 @media only screen and (max-width:1000px) {
   .s-pricing {
     padding-top: 17.2rem;
-    padding-bottom: 17.2rem;
+    padding-bottom: 0;
   }
 
 }
@@ -3951,7 +3951,7 @@ Diabled pricing: END
 @media only screen and (max-width:800px) {
   .s-pricing {
     padding-top: 16rem;
-    padding-bottom: 14.8rem;
+    padding-bottom: 0;
   }
 
   .plans {
@@ -3963,7 +3963,7 @@ Diabled pricing: END
 @media only screen and (max-width:600px) {
   .s-pricing {
     padding-top: 14.8rem;
-    padding-bottom: 12rem;
+    padding-bottom: 0;
   }
 
 }
@@ -4171,8 +4171,9 @@ Diabled pricing: END
   margin-bottom: 1rem;
 }
 
-.Signup form, input{
+.Signup__form input{
   margin-bottom: 0;
+  width: 100%;
 }
 .Signup__text {
   text-align: center;
@@ -4218,6 +4219,14 @@ input:focus {
   box-shadow: inset 1px 1px 2px 0 #c9c9c9;
 }
 
+/* Phones */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+    .Signup__form > button{
+      width: 100%;
+    }
+}
 /*-------------------------------
 Email errors
 */
@@ -5079,7 +5088,7 @@ POPUP
   and (max-device-width: 1024px) {
     .ribbon {
       margin-top: -1.5%;
-      margin-right: 53%;
+      margin-right: 20%;
     }
 }
 
@@ -5131,6 +5140,7 @@ POPUP
   border-radius: 4px;
   position: relative;
   border: none;
+  margin-bottom: 15%;
 }
 .faq label {
   display: block;
@@ -5235,12 +5245,13 @@ POPUP
     }
 }
 
+
 /* ------------------------------------------------------------------- 
  * ## video 
  * ------------------------------------------------------------------- */
 
 
- .video-section > iframe{
+.video-section > iframe{
   width: 60%;
   min-height: 56.7rem;
   position: relative;
