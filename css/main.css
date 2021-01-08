@@ -5235,4 +5235,46 @@ POPUP
     }
 }
 
+/* ------------------------------------------------------------------- 
+ * ## video 
+ * ------------------------------------------------------------------- */
 
+
+ .video-section > iframe{
+  width: 60%;
+  min-height: 56.7rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 0; 
+}
+
+/* Tablets  */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) {
+    .video-section > iframe{
+      width: 90%;
+      min-height: 5rem;
+      max-height: 37.5rem;
+      position: relative;
+      top: 0;
+      left: 0;
+      border: 0; 
+    }
+}
+
+/* Phones */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px) {
+    .video-section > iframe{
+      width: 95%;
+      min-height: 5rem;
+      max-height: 21.3rem;
+      position: relative;
+      top: 0;
+      left: 0;
+      border: 0; 
+    }
+}
