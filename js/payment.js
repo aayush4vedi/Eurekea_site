@@ -1,4 +1,4 @@
-var stripe = Stripe('pk_live_51HdkIZF7Uiqhzjej8jmVn0cPP7nHUz8WWf5tXCAuN9RUdvMqz1HFMf8c2jIeqodpvVEyp5sboQbM2Upq77k5FeUS00nBr8DiFh');
+var stripe = Stripe('pk_live_51IAHzNC1zO7Uu75KyU6O5otvjSqQnfXOZ4NqDrgzhSD7nnYwGiaLuRDUJxQU7X3ugSjmW94K4y6kNrgRDMwG87qc00uRH7ggph');
 
 $('#plan1_payment_form').submit( async function(){
   event.preventDefault();
@@ -29,7 +29,8 @@ $('#plan1_payment_form').submit( async function(){
       if(isIndian){
         // goto plan_1.INR
         stripe.redirectToCheckout({
-          lineItems: [{price: 'price_1I5BnWF7UiqhzjejUmOZRsF9', quantity: 1}],
+          // lineItems: [{price: 'price_1I4yyUF7UiqhzjejD3ZTeLit', quantity: 1}],
+          lineItems: [{price: 'price_1IAIInC1zO7Uu75K00OVWvCo', quantity: 1}],
           mode: 'payment',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -43,7 +44,8 @@ $('#plan1_payment_form').submit( async function(){
       }else{
         // goto plan1.DLR
         stripe.redirectToCheckout({
-          lineItems: [{price: 'price_1I5BmAF7Uiqhzjej50dn5Cch', quantity: 1}],
+          // lineItems: [{price: 'price_1I4yyUF7UiqhzjejD3ZTeLit', quantity: 1}],
+          lineItems: [{price: 'price_1IAIInC1zO7Uu75K00OVWvCo', quantity: 1}],
           mode: 'payment',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -86,7 +88,8 @@ $('#plan2_payment_form').submit( async function(){
       if(isIndian){
         // goto plan_2.INR
         stripe.redirectToCheckout({
-          lineItems: [{price: 'price_1I58rvF7UiqhzjejVy9rjnuY', quantity: 1}],
+          // lineItems: [{price: 'price_1I58rvF7UiqhzjejVy9rjnuY', quantity: 1}],
+          lineItems: [{price: 'price_1IAIInC1zO7Uu75K00OVWvCo', quantity: 1}],
           mode: 'subscription',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -100,7 +103,8 @@ $('#plan2_payment_form').submit( async function(){
       }else{
         //goto plan_2.Dlr
         stripe.redirectToCheckout({
-          lineItems: [{price: 'price_1I58qjF7UiqhzjejKSo97H1z', quantity: 1}],
+          // lineItems: [{price: 'price_1I58qjF7UiqhzjejKSo97H1z', quantity: 1}],
+          lineItems: [{price: 'price_1IAIInC1zO7Uu75K00OVWvCo', quantity: 1}],
           mode: 'subscription',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -113,10 +117,7 @@ $('#plan2_payment_form').submit( async function(){
         });
       }
     })
-
-  
 })
-
 
 /*--------------------------------- POPUP before payemnt --------------------*/
 
