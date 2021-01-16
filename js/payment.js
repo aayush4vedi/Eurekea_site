@@ -29,8 +29,7 @@ $('#plan1_payment_form').submit( async function(){
       if(isIndian){
         // goto plan_1.INR
         stripe.redirectToCheckout({
-          // lineItems: [{price: 'price_1I4yyUF7UiqhzjejD3ZTeLit', quantity: 1}],
-          lineItems: [{price: 'price_1IAIInC1zO7Uu75K00OVWvCo', quantity: 1}],
+          lineItems: [{price: 'price_1IAMtuC1zO7Uu75Ku1JF12HN', quantity: 1}],
           mode: 'payment',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -44,8 +43,7 @@ $('#plan1_payment_form').submit( async function(){
       }else{
         // goto plan1.DLR
         stripe.redirectToCheckout({
-          // lineItems: [{price: 'price_1I4yyUF7UiqhzjejD3ZTeLit', quantity: 1}],
-          lineItems: [{price: 'price_1IAIInC1zO7Uu75K00OVWvCo', quantity: 1}],
+          lineItems: [{price: 'price_1IAMsrC1zO7Uu75KI34IjwvC', quantity: 1}],
           mode: 'payment',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -88,8 +86,7 @@ $('#plan2_payment_form').submit( async function(){
       if(isIndian){
         // goto plan_2.INR
         stripe.redirectToCheckout({
-          // lineItems: [{price: 'price_1I58rvF7UiqhzjejVy9rjnuY', quantity: 1}],
-          lineItems: [{price: 'price_1IAIInC1zO7Uu75K00OVWvCo', quantity: 1}],
+          lineItems: [{price: 'price_1IAMl9C1zO7Uu75KU3NZHZ3z', quantity: 1}],
           mode: 'subscription',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -103,8 +100,7 @@ $('#plan2_payment_form').submit( async function(){
       }else{
         //goto plan_2.Dlr
         stripe.redirectToCheckout({
-          // lineItems: [{price: 'price_1I58qjF7UiqhzjejKSo97H1z', quantity: 1}],
-          lineItems: [{price: 'price_1IAIInC1zO7Uu75K00OVWvCo', quantity: 1}],
+          lineItems: [{price: 'price_1IAMjAC1zO7Uu75KXdwErDMB', quantity: 1}],
           mode: 'subscription',
           successUrl: 'https://www.eurekea.org/yay',
           cancelUrl: 'https://www.eurekea.org/nay',
@@ -118,7 +114,6 @@ $('#plan2_payment_form').submit( async function(){
       }
     })
 })
-
 /*--------------------------------- POPUP before payemnt --------------------*/
 
 // =============================== First Popup
